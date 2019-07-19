@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="index.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <title>MG</title>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="background-container">
+      <div class="text-container">
+        <div class="main-title-container">
+          <h1 id="bg-main-title">
+            <span>M</span>
+            <span>i</span>
+            <span>g</span>
+            <span>e</span>
+            <span>l</span>
+            <span>e</span>
+            <span style="width: 30px; display: inline-block;"></span>
+            <span>A</span>
+            <span>n</span>
+            <span>g</span>
+            <span>e</span>
+            <span>l</span>
+          </h1>
+          <h3 id="bg-description">Photographer</h3>
+        </div>
+        <a href="#section07"><span></span></a>
+      </div>
+      <!-- <div class="button-container-left">
+            <a href="something" class="button1">Button</a>
+        </div>
+        <div class="button-container-right">
+            <a href="something" class="button1">Another button</a>
+        </div> -->
+    </div>
+    <div class="navegacion">
+        <div class="navegacion-text">
+          <h2>Migele</h2>
+          <a>Contact </a>
+        </div>
+    </div>
+    <section class="entoncesqpa">
+      <h2>
+            Lorem ipsum dolor sit amet consectetur
+      </h2>
+      <p>
+          lorem ipsu
+      </p>
+    </section>
+    <div id="categories-container">
+        <div class="categories-container__item selected">
+          <h1 >Photo</h1>
+        </div>
+        <div class="categories-container__item">
+          <h1  >Video</h1>
+
+        </div>
+    </div>
+    <div class="categories-menu">
+      <div class="categories-menu__items">  <button class="close">Close</button></div>
+      <div class="categories-menu__items"><a class="bottom-animated-bar">Portrait</a></div>
+      <div class="categories-menu__items">Landscape</div>
+      <div class="categories-menu__items">Journalism</div>
+    </div>
+    <div class="wrapper">
+      <div class="box a">A</div>
+      <div class="box b">B</div>
+      <div class="box c">C</div>
+      <div class="box d">D</div>
+    </div>
+    <footer >
+      Migele | 333333333 | XXXXXX@gmail.
+    </footer>
+  </body>
+
+  <script>
+    let firstScroll = false;
+    $(document).ready(function(){
+      $(document).scroll(function(e) {
+        if (($(this).scrollTop() > 10 ) && !firstScroll) {
+          $('html, body').animate(
+            {
+              scrollTop: $('#categories-container').offset().top
+            },
+            2000
+          );
+          firstScroll= true;
+          e.preventDefault();
+         e.stopPropagation();
+        }
+
+        if($(this).scrollTop() > Math.max(document.documentElement.clientHeight, window.innerHeight || 0)){
+          $(".navegacion").addClass("nav-bar__fixed bounce");
+        }
+      });
+      showLetter(0);
+    });
+
+    function showLetter(i){
+        let letters =$('#bg-main-title').children(); 
+        if (i <= letters.length) {
+            $(letters[i]).fadeTo(1000,1);
+            setTimeout(() => {
+                showLetter(i + 1);
+            }, 200);
+        }
+        $('#bg-description').fadeTo(4000, 1);
+    }
+  </script>
+</html>

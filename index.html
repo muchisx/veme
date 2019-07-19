@@ -56,20 +56,21 @@
       </p>
     </section>
     <div id="categories-container">
-        <div class="categories-container__item selected">
+        <div class="categories-container__item selected" onclick="changePortafolio(this)" data-parameter="0">
           <h1 >Photo</h1>
         </div>
-        <div class="categories-container__item">
+        <div class="categories-container__item" onclick="changePortafolio(this)" data-parameter="1">
           <h1  >Video</h1>
 
         </div>
     </div>
-    <div class="categories-menu">
+    <div class="categories-menu" >
       <div class="categories-menu__items">  <button class="close">Close</button></div>
       <div class="categories-menu__items"><a class="bottom-animated-bar">Portrait</a></div>
       <div class="categories-menu__items">Landscape</div>
       <div class="categories-menu__items">Journalism</div>
     </div>
+
     <div class="wrapper">
       <div class="box a">A</div>
       <div class="box b">B</div>
@@ -113,6 +114,16 @@
             }, 200);
         }
         $('#bg-description').fadeTo(4000, 1);
+    }
+    function changePortafolio(e){
+      $(".categories-container__item").removeClass( "selected" );
+      $(e).addClass("selected");
+
+    }
+    function changeCategory(e){
+      $(".categories-container__item").removeClass( "selected" );
+      $(e).addClass("selected");
+
     }
   </script>
 </html>

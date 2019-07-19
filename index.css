@@ -173,6 +173,7 @@ a.button1:hover {
 
  .categories-container__item{
     width: 100%;
+    cursor: pointer;
     grid-row: 1;
 
  }
@@ -271,9 +272,8 @@ a.button1:hover {
   background: black;
   color: white;
   text-align: center;
-  height: 60px;
-  line-height: 60px;
-  transition: all 2.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  height: 100px;
+  line-height: 100px;
 }
 
 .nav-bar__fixed{
@@ -282,7 +282,9 @@ a.button1:hover {
   left: 0;
   right: 0;
   z-index: 1;
-  transition: all 2.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  height: 60px;
+  line-height: 60px;
+  transition: all 1.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
 }
 .navegacion-text{

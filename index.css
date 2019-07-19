@@ -7,7 +7,7 @@ body {
 }
 
 .background-container {
-  background-image: url('../img/background-image.jpg');
+  background-image: url('/img/background-image.jpg');
   height: 100vh;
   background-position: center;
   background-attachment: fixed;

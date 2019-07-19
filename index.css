@@ -209,8 +209,6 @@ a.button1:hover {
  }
  .categories-menu__items{
    grid-row: 1;
-   border: 2px solid #c7c7c7;
-   padding: 7px 14px;
    color: #4c4c4c;
  }
 
@@ -274,6 +272,7 @@ a.button1:hover {
   text-align: center;
   height: 100px;
   line-height: 100px;
+
 }
 
 .nav-bar__fixed{
@@ -322,7 +321,22 @@ footer::before {
 
 .close:hover,
 .close:focus {
-  box-shadow: inset -3.5em 0 0 0 var(--hover), inset 3.5em 0 0 0 var(--hover);
+  box-shadow: inset -8.5em 0 0 0 var(--hover), inset 8.5em 0 0 0 var(--hover);
+  cursor: pointer;
+}
+
+.close {
+  --color: rgb(77, 77, 77);
+  --hover: #000;
+}
+
+button {
+  color: var(--color);
+  transition: 1.25s;
+}
+button:hover, button:focus {
+  border-color: var(--hover);
+  color: #fff;
 }
 
 button {
@@ -331,22 +345,11 @@ button {
   font: inherit;
   line-height: 1;
   margin: 0.5em;
-  padding: 5px 12px;
+  padding: 1em 2em;
 }
 
 
-@keyframes bounce
-{0%,20%,53%,80%,
-  to{-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);animation-timing-function:cubic-bezier(.215,.61,.355,1);
-    -webkit-transform:translateZ(0);transform:translateZ(0)}
-    40%,43%{-webkit-animation-timing-function:cubic-bezier(.755,.05,.855,.06);
-      animation-timing-function:cubic-bezier(.755,.05,.855,.06);
-      -webkit-transform:translate3d(0,-30px,0);transform:translate3d(0,-30px,0)}
-      70%{-webkit-animation-timing-function:cubic-bezier(.755,.05,.855,.06);
-        animation-timing-function:cubic-bezier(.755,.05,.855,.06);
-        -webkit-transform:translate3d(0,-15px,0);
-        transform:translate3d(0,-15px,0)}
-        90%{-webkit-transform:translate3d(0,-4px,0);transform:translate3d(0,-4px,0)}
-      }
-      
-      .bounce{-webkit-animation-name:bounce;animation-name:bounce;-webkit-transform-origin:center bottom;transform-origin:center bottom}
+code {
+  color: #e4cb58;
+  font: inherit;
+}

@@ -10,7 +10,10 @@
       rel="stylesheet"
     />
     <title>MG</title>
-    <script src="vendor/jquery/jquery.min.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="background-container">
@@ -65,16 +68,16 @@
         </div>
     </div>
     <div class="categories-menu" id="photo" >
-      <div class="categories-menu__items"><button class="close">Events</button></div>
-      <div class="categories-menu__items"><button class="close">Portrait</button></div>
-      <div class="categories-menu__items"><button class="close">Landscape</button></div>
-      <div class="categories-menu__items"><button class="close">Journalism</button></div>
+      <div class="categories-menu__items"><button class="close" id="events">Events</button></div>
+      <div class="categories-menu__items"><button class="close" id="Portrait" >Portrait</button></div>
+      <div class="categories-menu__items"><button class="close" id="Landscape" >Landscape</button></div>
+      <div class="categories-menu__items"><button class="close" id="Journalism" >Journalism</button></div>
     </div>
     <div class="categories-menu hidden"  id="video" >
-        <div class="categories-menu__items"><button class="close">video</button></div>
-        <div class="categories-menu__items"><button class="close">video</button></div>
-        <div class="categories-menu__items"><button class="close">video</button></div>
-        <div class="categories-menu__items"><button class="close">video</button></div>
+        <div class="categories-menu__items"><button class="close" id="video" >video</button></div>
+        <div class="categories-menu__items"><button class="close" id="video" >video</button></div>
+        <div class="categories-menu__items"><button class="close" id="video" >video</button></div>
+        <div class="categories-menu__items"><button class="close" id="video" >video</button></div>
       </div>
     
     <div class="wrapper">
@@ -121,6 +124,12 @@
 
   <script>
     let firstScroll = false;
+    let events = ["","","",""];
+    let Portrait = ["","","",""];
+    let Landscape = ["","","",""];
+    let Journalism = ["","","",""];
+
+    
     $(document).ready(function(){
       $(document).scroll(function(e) {
         if (($(this).scrollTop() > 10 ) && !firstScroll) {
@@ -174,5 +183,6 @@
       $(e).removeClass("hidden");
 
     }
+
   </script>
 </html>

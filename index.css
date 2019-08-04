@@ -280,6 +280,7 @@ a.button1:hover {
   cursor: pointer;
   position: absolute;
   top: 0;
+  color: #fff;
   right: 20px;
 
 }

@@ -47,7 +47,7 @@
     <div class="navegacion">
         <div class="navegacion-text">
           <h2>Migele</h2>
-          <a>Contact </a>
+          <a href="#contact">Contact </a>
         </div>
     </div>
     <section class="entoncesqpa">
@@ -68,22 +68,22 @@
         </div>
     </div>
     <div class="categories-menu" id="photo" >
-      <div class="categories-menu__items"><button class="close" id="events">Events</button></div>
-      <div class="categories-menu__items"><button class="close" id="Portrait" >Portrait</button></div>
-      <div class="categories-menu__items"><button class="close" id="Landscape" >Landscape</button></div>
-      <div class="categories-menu__items"><button class="close" id="Journalism" >Journalism</button></div>
+      <div class="categories-menu__items"><button class="close img-btn" id="events">Events</button></div>
+      <div class="categories-menu__items"><button class="close img-btn" id="Portrait" >Portrait</button></div>
+      <div class="categories-menu__items"><button class="close img-btn" id="Landscape" >Landscape</button></div>
+      <div class="categories-menu__items"><button class="close img-btn" id="Journalism" >Journalism</button></div>
     </div>
     <div class="categories-menu hidden"  id="video" >
-        <div class="categories-menu__items"><button class="close" id="video" >video</button></div>
-        <div class="categories-menu__items"><button class="close" id="video" >video</button></div>
-        <div class="categories-menu__items"><button class="close" id="video" >video</button></div>
-        <div class="categories-menu__items"><button class="close" id="video" >video</button></div>
+        <div class="categories-menu__items"><button class="close" attr-type="video" >video</button></div>
+        <div class="categories-menu__items"><button class="close" attr-type="video" >video</button></div>
+        <div class="categories-menu__items"><button class="close" attr-type="video" >video</button></div>
+        <div class="categories-menu__items"><button class="close" attr-type="video" >video</button></div>
       </div>
     
     <div class="wrapper">
       <div class="box a">
         <div  class="photo">
-          <img src="https://drscdn.500px.org/photo/311998195/q%3D80_m%3D1000/v2?user_id=26324743&webp=true&sig=4d9165691d89f5817e5303e1a17af5716343996f721c77a3d27d3c508f325de8" />
+          <img  id="img1" src="https://drscdn.500px.org/photo/311998195/q%3D80_m%3D1000/v2?user_id=26324743&webp=true&sig=4d9165691d89f5817e5303e1a17af5716343996f721c77a3d27d3c508f325de8" />
           <div class="glow-wrap">
             <i class="glow"></i>
           </div>
@@ -91,7 +91,7 @@
       </div>
       <div class="box b">
         <div  class="photo">
-          <img src="https://drscdn.500px.org/photo/312626869/q%3D80_m%3D1500/v2?user_id=26324743&webp=true&sig=820e0a794b0a6feb72a11e9aa4b0bbe1d8d42754c1c0e1b35b68f5d92ebdfd4e" />
+          <img id="img2" src="https://drscdn.500px.org/photo/312626869/q%3D80_m%3D1500/v2?user_id=26324743&webp=true&sig=820e0a794b0a6feb72a11e9aa4b0bbe1d8d42754c1c0e1b35b68f5d92ebdfd4e" />
           <div class="glow-wrap">
             <i class="glow"></i>
           </div>
@@ -99,7 +99,7 @@
       </div>
       <div class="box c">
         <div  class="photo">
-          <img src="https://drscdn.500px.org/photo/311998195/q%3D80_m%3D1000/v2?user_id=26324743&webp=true&sig=4d9165691d89f5817e5303e1a17af5716343996f721c77a3d27d3c508f325de8" />
+          <img id="img3" src="https://drscdn.500px.org/photo/311998195/q%3D80_m%3D1000/v2?user_id=26324743&webp=true&sig=4d9165691d89f5817e5303e1a17af5716343996f721c77a3d27d3c508f325de8" />
           <div class="glow-wrap">
             <i class="glow"></i>
           </div>
@@ -108,7 +108,7 @@
       <div class="box d">
         
         <div  class="photo">
-          <img src="https://drscdn.500px.org/photo/311998195/q%3D80_m%3D1000/v2?user_id=26324743&webp=true&sig=4d9165691d89f5817e5303e1a17af5716343996f721c77a3d27d3c508f325de8" />
+          <img id="img4" src="https://drscdn.500px.org/photo/311998195/q%3D80_m%3D1000/v2?user_id=26324743&webp=true&sig=4d9165691d89f5817e5303e1a17af5716343996f721c77a3d27d3c508f325de8" />
           <div class="glow-wrap">
             <i class="glow"></i>
           </div>
@@ -117,17 +117,20 @@
 
       </div>
     </div>
-    <footer >
+    <footer id="contact" >
       Migele | 333333333 | XXXXXX@gmail.
     </footer>
   </body>
 
   <script>
     let firstScroll = false;
-    let events = ["","","",""];
-    let Portrait = ["","","",""];
-    let Landscape = ["","","",""];
-    let Journalism = ["","","",""];
+    const imgcontainer = {
+    events : { img : ["https://drscdn.500px.org/photo/311998195/q%3D80_m%3D1000/v2?user_id=26324743&webp=true&sig=4d9165691d89f5817e5303e1a17af5716343996f721c77a3d27d3c508f325de8","https://drscdn.500px.org/photo/311998195/q%3D80_m%3D1000/v2?user_id=26324743&webp=true&sig=4d9165691d89f5817e5303e1a17af5716343996f721c77a3d27d3c508f325de8","https://cdn.imgbin.com/10/6/7/imgbin-crayon-shin-chan-himawari-nohara-manga-television-show-action-kamen-manga-SFjwTmYyMc08GjBzZ8sapQATc.jpg","https://cdn.imgbin.com/10/6/7/imgbin-crayon-shin-chan-himawari-nohara-manga-television-show-action-kamen-manga-SFjwTmYyMc08GjBzZ8sapQATc.jpg"] },
+    Portrait : { img : ["https://drscdn.500px.org/photo/1000751614/q%3D80_m%3D1000/v2?sig=2144ce736744534f4a2b6cd28c4abd331b7a6619e5bf7349aead19509ab79420","https://drscdn.500px.org/photo/253613751/q%3D80_m%3D1000/v2?sig=8e96fa6a381017fcb3a9acac856039327d8b1f7534c69e131646c3a87d705ba1","https://drscdn.500px.org/photo/172108347/q%3D80_m%3D1500_k%3D1/v2?sig=787401dc3c233e6eb863dfbc158a2c7323397ccb4244470eb150c17950bf2184","https://cdn.imgbin.com/10/6/7/imgbin-crayon-shin-chan-himawari-nohara-manga-television-show-action-kamen-manga-SFjwTmYyMc08GjBzZ8sapQATc.jpg"] },
+    Landscape : { img : ["https://drscdn.500px.org/photo/311998195/q%3D80_m%3D1000/v2?user_id=26324743&webp=true&sig=4d9165691d89f5817e5303e1a17af5716343996f721c77a3d27d3c508f325de8","https://cdn.imgbin.com/10/6/7/imgbin-crayon-shin-chan-himawari-nohara-manga-television-show-action-kamen-manga-SFjwTmYyMc08GjBzZ8sapQATc.jpg","https://drscdn.500px.org/photo/311998195/q%3D80_m%3D1000/v2?user_id=26324743&webp=true&sig=4d9165691d89f5817e5303e1a17af5716343996f721c77a3d27d3c508f325de8","https://cdn.imgbin.com/10/6/7/imgbin-crayon-shin-chan-himawari-nohara-manga-television-show-action-kamen-manga-SFjwTmYyMc08GjBzZ8sapQATc.jpg"] },
+    Journalism : { img : ["https://cdn.imgbin.com/10/6/7/imgbin-crayon-shin-chan-himawari-nohara-manga-television-show-action-kamen-manga-SFjwTmYyMc08GjBzZ8sapQATc.jpg","https://cdn.imgbin.com/10/6/7/imgbin-crayon-shin-chan-himawari-nohara-manga-television-show-action-kamen-manga-SFjwTmYyMc08GjBzZ8sapQATc.jpg","https://drscdn.500px.org/photo/311998195/q%3D80_m%3D1000/v2?user_id=26324743&webp=true&sig=4d9165691d89f5817e5303e1a17af5716343996f721c77a3d27d3c508f325de8","https://drscdn.500px.org/photo/311998195/q%3D80_m%3D1000/v2?user_id=26324743&webp=true&sig=4d9165691d89f5817e5303e1a17af5716343996f721c77a3d27d3c508f325de8"] },
+
+    }
 
     
     $(document).ready(function(){
@@ -162,21 +165,19 @@
         $('#bg-description').fadeTo(4000, 1);
     }
     function changePortafolio(e){
-      $(".categories-container__item").removeClass( "selected" );
+      /*$(".categories-container__item").removeClass( "selected" );
       $(e).addClass("selected");
       $(".categories-menu").addClass("hidden-animation");
       setTimeout(() => {
       let attrSelected = ($( e ).attr("data-parameter"));
       if (attrSelected === 'photo') { 
-        console.log("photo", "video");
         $("#video").addClass("hidden");
       } else {
-        console.log("photo", "video");
         $("#photo").addClass("hidden");
       }
       $("#"+ attrSelected).removeClass("hidden-animation hidden");
 
-      }, 1000);
+      }, 1000); */
     }
     function changeCategory(e){
       $(".categories-container__item").addClass( "hidden" );
@@ -184,5 +185,31 @@
 
     }
 
+    function changeImage(htmlDocument){
+
+      let imgs = imgcontainer[htmlDocument.getAttribute("id")].img; 
+      console.log(imgs);
+    
+      document.getElementById("img1").setAttribute("src", imgs[0]);
+      document.getElementById("img2").setAttribute("src", imgs[1]);
+      document.getElementById("img3").setAttribute("src", imgs[2]);
+      document.getElementById("img4").setAttribute("src", imgs[3]); 
+    }
+
+    function init(){
+      let buttons = document.querySelectorAll('.img-btn');
+      for (let i = 0; i < buttons.length; i++) {
+      let self = buttons[i];
+
+        self.addEventListener('click', function (event) {  
+        // prevent browser's default action
+        event.preventDefault();
+
+        // call your awesome function here
+        changeImage(this); // 'this' refers to the current button on for loop
+        }, false);
+      }
+    }
+    init();
   </script>
 </html>

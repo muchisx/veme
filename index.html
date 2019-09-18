@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="index.css" rel="stylesheet" />
     <link
-      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      href="https://fonts.googleapis.com/css?family=Poppins:200,200i,400,400i,700,700i&display=swap"
       rel="stylesheet"
     />
     <title>MG</title>
@@ -20,21 +20,30 @@
     <div class="background-container">
       <div class="text-container">
         <div class="main-title-container">
-          <h1 id="bg-main-title">
-            <span>M</span>
-            <span>i</span>
-            <span>g</span>
-            <span>e</span>
-            <span>l</span>
-            <span>e</span>
-            <span style="width: 30px; display: inline-block;"></span>
-            <span>A</span>
-            <span>n</span>
-            <span>g</span>
-            <span>e</span>
-            <span>l</span>
+          <h1 id="bg-main-title" style="
+                  font-weight: bolder;
+                  font-style: italic;
+                  text-shadow: 6px 6px #171717;
+                  ">
+                  <span style="opacity: 1;">M</span>
+                  <span style="opacity: 1;">I</span>
+                  <span style="opacity: 1;">G</span>
+                  <span style="opacity: 1;">U</span>
+                  <span style="opacity: 1;">E</span>
+                  <span style="opacity: 1;">L</span>
+                  <span style="width: 30px; display: inline-block; opacity: 1;"></span>
+                  <span style="opacity: 1;">Á</span>
+                  <span style="opacity: 1;">N</span>
+                  <span style="opacity: 1;">G</span>
+                  <span style="opacity: 1;">E</span>
+                  <span style="opacity: 1;">L</span>
           </h1>
-          <h3 id="bg-description">Photographer</h3>
+          <h3 id="bg-description" style="
+                  text-shadow: 4px 4px #171717"
+                  >
+                  Visual Artist
+          </h3>
+
         </div>
         <a href="#section07"><span></span></a>
       </div>
@@ -47,30 +56,42 @@
     </div>
     <div class="navegacion">
       <div class="navegacion-text">
-        <h2>Migele</h2>
-        <a href="#contact">Contact </a>
-        <p>miguelangel@gmail.com</p>
+        <h2 style="
+          font-weight: 400;
+          ">Miguel Ángel
+        </h2>
+        <a href="#contact" style="
+          text-underline-position: under;
+          ">Contact
+        </a>
+        <p>miguel.angel.creator@gmail.com</p>
       </div>
     </div>
     <section id="pruebamlo" class="entoncesqpa">
       <h2>
-        Lorem ipsum dolor sit amet consectetur
+        Walking on the sunny side of the street
       </h2>
       <p>
-        lorem ipsu
+        2019
       </p>
     </section>
     <section class="categories_container" id="categories-container">
       <div class="categories_container--btn">
-        <h1 class="title">
-          Photo
+        <h1 class="title" style="
+            text-shadow: 3px 3px black;
+            FONT-SIZE: 5vh;
+            ">
+          PHOTOGRAPHY
         </h1>
         <div class="hover_content">
         </div>
       </div>
       <div class="categories_container--btn">
-        <h1 class="title">
-          Video
+        <h1 class="title" style="
+            text-shadow: 3px 3px black;
+            FONT-SIZE: 5vh;
+            ">
+          VIDEO
         </h1>
         <div class="background_video">
           <iframe width="100%" height="100%" src="https://www.youtube.com/embed/YJT2Xdfo7RA?autoplay=1&controls=0&disablekb=1&fs=0&loop=1&playlist=YJT2Xdfo7RA&amp;start=10" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -78,7 +99,7 @@
       </div>
     </section>
     <footer id="contact">
-      Copyright 2019 ©Miguel Angel
+      Copyright 2019 © Miguel Ángel
     </footer>
   </body>
 
@@ -123,7 +144,7 @@
         if ($(this).scrollTop() > 10 && !firstScroll) {
           $('html, body').animate(
             {
-              scrollTop: $('#pruebamlo').offset().top - 120 
+              scrollTop: $('#pruebamlo').offset().top - 120
             },
             2000
           );
@@ -161,7 +182,7 @@
       $(".categories-menu").addClass("hidden-animation");
       setTimeout(() => {
       let attrSelected = ($( e ).attr("data-parameter"));
-      if (attrSelected === 'photo') { 
+      if (attrSelected === 'photo') {
         $("#video").addClass("hidden");
       } else {
         $("#photo").addClass("hidden");

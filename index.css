@@ -1,7 +1,7 @@
 
 *,
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -16,7 +16,7 @@ body {
   display: grid;
   grid-gap: 10px;
   color: #444;
-/*   justify-items: center;*/  
+/*   justify-items: center;*/
   justify-content: stretch;
 }
 
@@ -26,7 +26,7 @@ body {
   height: 100%;
   position: relative;
   text-align: center;
-  background: #29160345;
+  background: #00000038;
 }
 .button-container-left {
   grid-column: 1;
@@ -45,12 +45,13 @@ body {
 h1#bg-main-title {
   font-size: 4rem;
   color: white;
-  font-weight: 100;
+  font-weight: 400;
 }
 
 #bg-description {
   font-size: 1.5rem;
   color: white;
+  padding-left: 594px;
 }
 
 /* Button */
@@ -83,7 +84,7 @@ a.button1:hover {
  /* ACA TERMINA EL BOTON */
 
 
- /* --------ICON--------- */ 
+ /* --------ICON--------- */
  .text-container a span {
     position: absolute;
     bottom: 54px;
@@ -126,12 +127,12 @@ a.button1:hover {
       opacity: 0;
     }
   }
-  
- /* ----CIERRE ICON ----- */  
+
+ /* ----CIERRE ICON ----- */
 
 
  /* category separate */
- 
+
  .entoncesqpa{
      height: 70px;
      margin: 50px;
@@ -141,13 +142,13 @@ a.button1:hover {
     content: '';
     display: block;
     width: 100px;
-    border-top: #8a8a8a 2px solid; 
+    border-top: #8a8a8a 2px solid;
     top: 0;
     left: 0;
     right: 0;
     margin: 0 auto;
     position: absolute;
-    
+
 }
 .entoncesqpa p {
     margin-top: 10px;
@@ -184,7 +185,7 @@ a.button1:hover {
   content: '';
   display: block;
   width: 100%;
-  border-top: #8a8a8a 2px solid; 
+  border-top: #8a8a8a 2px solid;
   bottom: 0;
   left: 0;
   right: 0;
@@ -196,7 +197,7 @@ a.button1:hover {
  .categories-menu{
   display: grid;
   grid-gap: 10px;
-  justify-content: space-around; 
+  justify-content: space-around;
   border-top: 4px solid #e8e5e5;
   margin-bottom: 31px;
   padding-top: 8px;
@@ -244,72 +245,75 @@ a.button1:hover {
   z-index: 20;
 }
 
-/* navegacion */ 
+  /* navegacion */
 
-.navegacion {
-  -webkit-box-shadow: 0px 3px 19px -4px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 3px 19px -4px rgba(0,0,0,0.75);
-  box-shadow: 0px 3px 19px -4px rgba(0,0,0,0.75);
-  background: black;
-  color: white;
-  text-align: center;
-  height: 80px;
-  line-height: 80px;
-
-}
-
-.nav-bar__fixed{
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  height: 60px;
-  line-height: 60px;
-}
-
-.navegacion-text{
-  position: relative;
-  overflow: hidden;
-}
-.navegacion-text a{
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  color: #fff;
-  right: 20px;
-  transition-duration: 2000ms;
-}
-
-.navegacion-text p{
-  position: absolute;
-  top: 60px;
-  color: #fff;
-  right: 20px;
- transition-duration: 2000ms;
-}
-.navegacion-text:hover>a{
- top: -60px;
- transition-duration: 2000ms;
-}
-
-.navegacion-text:hover>p{
- top: 0px;
- transition-duration: 2000ms;
-}
-
-footer{
-  height: 60px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .navegacion {
+    -webkit-box-shadow: 0px 3px 19px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 19px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 3px 19px -4px rgba(0,0,0,0.75);
+    background: black;
     color: white;
-    background: #121212;
-    margin-top: 70px;
+    text-align: center;
+    height: 80px;
+    line-height: 80px;
+
+  }
+
+  .nav-bar__fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    height: 60px;
+    line-height: 60px;
+  }
+
+  .navegacion-text{
     position: relative;
-    font-size: 0.8rem;
-}
+    overflow: hidden;
+  }
+  .navegacion-text a{
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    color: #dcdcdc;
+    right: 20px;
+    transition-duration: 2000ms;
+    font-weight: lighter;
+  }
+
+  .navegacion-text p{
+    position: absolute;
+    top: 60px;
+    color: #dcdcdc;
+    right: 20px;
+   transition-duration: 2000ms;
+   font-weight: lighter;
+  }
+
+  .navegacion-text:hover>a{
+   top: -60px;
+   transition-duration: 2000ms;
+  }
+
+  .navegacion-text:hover>p{
+   top: 0px;
+   transition-duration: 2000ms;
+  }
+
+  footer{
+    height: 60px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      background: #121212;
+      margin-top: 70px;
+      position: relative;
+      font-size: 0.8rem;
+  }
 
 
 .close:hover,
@@ -363,7 +367,7 @@ code {
 
 .photo:hover img{
   box-shadow: 10px 15px 25px 0 rgba(0,0,0,.2);
-  
+
 }
 
 .photo .glow-wrap{
@@ -433,7 +437,7 @@ code {
   height: 80vh;
   grid-gap: 7px;
   height: 100%;
-  
+
 }
 
 .categories_container--btn{
@@ -518,4 +522,3 @@ code {
   background: rgba(0,0,0,0);
   transition-duration: 3000ms;
 }
-

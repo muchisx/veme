@@ -47,15 +47,10 @@ h1#bg-main-title {
   color: white;
   font-weight: 100;
 }
-h1 span {
-    opacity: 0;
-}
 
 #bg-description {
   font-size: 1.5rem;
   color: white;
-  opacity: 0;
-
 }
 
 /* Button */
@@ -138,7 +133,7 @@ a.button1:hover {
  /* category separate */
  
  .entoncesqpa{
-     height: 100px;
+     height: 70px;
      margin: 50px;
      text-align: center;
  }
@@ -168,6 +163,7 @@ a.button1:hover {
     height: 40px;
     text-align: center;
     padding: 0 20px;
+    height: 100%;
     color: #4c4c4c;
  }
 
@@ -257,8 +253,8 @@ a.button1:hover {
   background: black;
   color: white;
   text-align: center;
-  height: 100px;
-  line-height: 100px;
+  height: 80px;
+  line-height: 80px;
 
 }
 
@@ -270,11 +266,11 @@ a.button1:hover {
   z-index: 1;
   height: 60px;
   line-height: 60px;
-  transition: all 1.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
 }
+
 .navegacion-text{
   position: relative;
+  overflow: hidden;
 }
 .navegacion-text a{
   cursor: pointer;
@@ -282,28 +278,37 @@ a.button1:hover {
   top: 0;
   color: #fff;
   right: 20px;
+  transition-duration: 2000ms;
+}
 
+.navegacion-text p{
+  position: absolute;
+  top: 60px;
+  color: #fff;
+  right: 20px;
+ transition-duration: 2000ms;
+}
+.navegacion-text:hover>a{
+ top: -60px;
+ transition-duration: 2000ms;
+}
+
+.navegacion-text:hover>p{
+ top: 0px;
+ transition-duration: 2000ms;
 }
 
 footer{
-  height: 200px;
+  height: 60px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     background: #121212;
-    margin-top: 100px;
+    margin-top: 70px;
     position: relative;
-}
-footer::before {
-  content:"\A";
-  border-style: solid;
-  border-width: 70px 203px 56px 472px;
-  border-color: #ffffff transparent transparent transparent;
-  position: absolute;
-  left: 0;
-  top: 0;
+    font-size: 0.8rem;
 }
 
 
@@ -419,3 +424,98 @@ code {
     transform: skew(-0.02turn, 10deg);
   }
 }
+
+
+
+.categories_container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  height: 80vh;
+  grid-gap: 7px;
+  height: 100%;
+  
+}
+
+.categories_container--btn{
+  cursor: pointer;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-shadow: 3px 4px 18px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 3px 4px 18px -1px rgba(0,0,0,0.75);
+  box-shadow: 3px 4px 18px -1px rgba(0,0,0,0.75);
+  border-radius: 5px;
+}
+
+.categories_container--btn>h1{
+  line-height: 70vh;
+}
+.hover_content{
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+  background: url("https://img.blogs.es/anexom/wp-content/uploads/2018/12/42707058715_61bbdc578f_k.jpg");
+  background-position: center;
+  background-size: 160%;
+  height: 70vh;
+  transform: scale(1.1);
+
+}
+
+.hover_content img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.categories_container--btn .title{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+.categories_container--btn:hover>.hover_content{
+
+  animation-name: myAnimationBlur;
+  animation-duration: 12000ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes myAnimationBlur{
+  0%{
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    background-size: 160%;
+  }
+  100%{
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+    background-size: 175%;
+  }
+}
+.categories_container--btn:nth-child(2)>.title{
+  background: rgba(0,0,0,0.3)
+}
+
+.background_video{
+  height: 70vh;
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+  transform: scale(2);
+
+}
+
+.categories_container--btn:hover>.background_video{
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+  transition-duration: 3000ms;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.categories_container--btn:nth-child(2):hover>.title{
+  background: rgba(0,0,0,0);
+  transition-duration: 3000ms;
+}
+

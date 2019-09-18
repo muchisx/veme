@@ -11,9 +11,10 @@
     />
     <title>MG</title>
     <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="background-container">
@@ -45,126 +46,116 @@
         </div> -->
     </div>
     <div class="navegacion">
-        <div class="navegacion-text">
-          <h2>Migele</h2>
-          <a href="#contact">Contact </a>
-        </div>
+      <div class="navegacion-text">
+        <h2>Migele</h2>
+        <a href="#contact">Contact </a>
+        <p>miguelangel@gmail.com</p>
+      </div>
     </div>
-    <section class="entoncesqpa">
+    <section id="pruebamlo" class="entoncesqpa">
       <h2>
-            Lorem ipsum dolor sit amet consectetur
+        Lorem ipsum dolor sit amet consectetur
       </h2>
       <p>
-          lorem ipsu
+        lorem ipsu
       </p>
     </section>
-    <div id="categories-container">
-        <div class="categories-container__item selected" onclick="changePortafolio(this)" data-parameter="photo">
-          <h1 >Photo</h1>
-        </div>
-        <div class="categories-container__item" onclick="changePortafolio(this)" data-parameter="video">
-          <h1  >Video</h1>
-
-        </div>
-    </div>
-    <div class="categories-menu" id="photo" >
-      <div class="categories-menu__items"><button class="close img-btn" id="events">Events</button></div>
-      <div class="categories-menu__items"><button class="close img-btn" id="Portrait" >Portrait</button></div>
-      <div class="categories-menu__items"><button class="close img-btn" id="Landscape" >Landscape</button></div>
-      <div class="categories-menu__items"><button class="close img-btn" id="Journalism" >Journalism</button></div>
-    </div>
-    <div class="categories-menu hidden"  id="video" >
-        <div class="categories-menu__items"><button class="close" attr-type="video" >video</button></div>
-        <div class="categories-menu__items"><button class="close" attr-type="video" >video</button></div>
-        <div class="categories-menu__items"><button class="close" attr-type="video" >video</button></div>
-        <div class="categories-menu__items"><button class="close" attr-type="video" >video</button></div>
-      </div>
-    
-    <div class="wrapper">
-      <div class="box a">
-        <div  class="photo">
-          <img  id="img1" src="https://drscdn.500px.org/photo/311998195/q%3D80_m%3D1000/v2?user_id=26324743&webp=true&sig=4d9165691d89f5817e5303e1a17af5716343996f721c77a3d27d3c508f325de8" />
-          <div class="glow-wrap">
-            <i class="glow"></i>
-          </div>
+    <section class="categories_container" id="categories-container">
+      <div class="categories_container--btn">
+        <h1 class="title">
+          Photo
+        </h1>
+        <div class="hover_content">
         </div>
       </div>
-      <div class="box b">
-        <div  class="photo">
-          <img id="img2" src="https://drscdn.500px.org/photo/312626869/q%3D80_m%3D1500/v2?user_id=26324743&webp=true&sig=820e0a794b0a6feb72a11e9aa4b0bbe1d8d42754c1c0e1b35b68f5d92ebdfd4e" />
-          <div class="glow-wrap">
-            <i class="glow"></i>
-          </div>
+      <div class="categories_container--btn">
+        <h1 class="title">
+          Video
+        </h1>
+        <div class="background_video">
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/YJT2Xdfo7RA?autoplay=1&controls=0&disablekb=1&fs=0&loop=1&playlist=YJT2Xdfo7RA&amp;start=10" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
-      <div class="box c">
-        <div  class="photo">
-          <img id="img3" src="https://drscdn.500px.org/photo/311998195/q%3D80_m%3D1000/v2?user_id=26324743&webp=true&sig=4d9165691d89f5817e5303e1a17af5716343996f721c77a3d27d3c508f325de8" />
-          <div class="glow-wrap">
-            <i class="glow"></i>
-          </div>
-        </div>
-      </div>
-      <div class="box d">
-        
-        <div  class="photo">
-          <img id="img4" src="https://drscdn.500px.org/photo/311998195/q%3D80_m%3D1000/v2?user_id=26324743&webp=true&sig=4d9165691d89f5817e5303e1a17af5716343996f721c77a3d27d3c508f325de8" />
-          <div class="glow-wrap">
-            <i class="glow"></i>
-          </div>
-        </div>
-
-
-      </div>
-    </div>
-    <footer id="contact" >
-      Migele | 333333333 | XXXXXX@gmail.
+    </section>
+    <footer id="contact">
+      Copyright 2019 ©Miguel Angel
     </footer>
   </body>
 
   <script>
     let firstScroll = false;
     const imgcontainer = {
-    events : { img : ["https://drscdn.500px.org/photo/311998195/q%3D80_m%3D1000/v2?user_id=26324743&webp=true&sig=4d9165691d89f5817e5303e1a17af5716343996f721c77a3d27d3c508f325de8","https://drscdn.500px.org/photo/311998195/q%3D80_m%3D1000/v2?user_id=26324743&webp=true&sig=4d9165691d89f5817e5303e1a17af5716343996f721c77a3d27d3c508f325de8","https://cdn.imgbin.com/10/6/7/imgbin-crayon-shin-chan-himawari-nohara-manga-television-show-action-kamen-manga-SFjwTmYyMc08GjBzZ8sapQATc.jpg","https://cdn.imgbin.com/10/6/7/imgbin-crayon-shin-chan-himawari-nohara-manga-television-show-action-kamen-manga-SFjwTmYyMc08GjBzZ8sapQATc.jpg"] },
-    Portrait : { img : ["https://drscdn.500px.org/photo/1000751614/q%3D80_m%3D1000/v2?sig=2144ce736744534f4a2b6cd28c4abd331b7a6619e5bf7349aead19509ab79420","https://drscdn.500px.org/photo/253613751/q%3D80_m%3D1000/v2?sig=8e96fa6a381017fcb3a9acac856039327d8b1f7534c69e131646c3a87d705ba1","https://drscdn.500px.org/photo/172108347/q%3D80_m%3D1500_k%3D1/v2?sig=787401dc3c233e6eb863dfbc158a2c7323397ccb4244470eb150c17950bf2184","https://cdn.imgbin.com/10/6/7/imgbin-crayon-shin-chan-himawari-nohara-manga-television-show-action-kamen-manga-SFjwTmYyMc08GjBzZ8sapQATc.jpg"] },
-    Landscape : { img : ["https://drscdn.500px.org/photo/311998195/q%3D80_m%3D1000/v2?user_id=26324743&webp=true&sig=4d9165691d89f5817e5303e1a17af5716343996f721c77a3d27d3c508f325de8","https://cdn.imgbin.com/10/6/7/imgbin-crayon-shin-chan-himawari-nohara-manga-television-show-action-kamen-manga-SFjwTmYyMc08GjBzZ8sapQATc.jpg","https://drscdn.500px.org/photo/311998195/q%3D80_m%3D1000/v2?user_id=26324743&webp=true&sig=4d9165691d89f5817e5303e1a17af5716343996f721c77a3d27d3c508f325de8","https://cdn.imgbin.com/10/6/7/imgbin-crayon-shin-chan-himawari-nohara-manga-television-show-action-kamen-manga-SFjwTmYyMc08GjBzZ8sapQATc.jpg"] },
-    Journalism : { img : ["https://cdn.imgbin.com/10/6/7/imgbin-crayon-shin-chan-himawari-nohara-manga-television-show-action-kamen-manga-SFjwTmYyMc08GjBzZ8sapQATc.jpg","https://cdn.imgbin.com/10/6/7/imgbin-crayon-shin-chan-himawari-nohara-manga-television-show-action-kamen-manga-SFjwTmYyMc08GjBzZ8sapQATc.jpg","https://drscdn.500px.org/photo/311998195/q%3D80_m%3D1000/v2?user_id=26324743&webp=true&sig=4d9165691d89f5817e5303e1a17af5716343996f721c77a3d27d3c508f325de8","https://drscdn.500px.org/photo/311998195/q%3D80_m%3D1000/v2?user_id=26324743&webp=true&sig=4d9165691d89f5817e5303e1a17af5716343996f721c77a3d27d3c508f325de8"] },
+      events: {
+        img: [
+          'https://drscdn.500px.org/photo/311998195/q%3D80_m%3D1000/v2?user_id=26324743&webp=true&sig=4d9165691d89f5817e5303e1a17af5716343996f721c77a3d27d3c508f325de8',
+          'https://drscdn.500px.org/photo/311998195/q%3D80_m%3D1000/v2?user_id=26324743&webp=true&sig=4d9165691d89f5817e5303e1a17af5716343996f721c77a3d27d3c508f325de8',
+          'https://cdn.imgbin.com/10/6/7/imgbin-crayon-shin-chan-himawari-nohara-manga-television-show-action-kamen-manga-SFjwTmYyMc08GjBzZ8sapQATc.jpg',
+          'https://cdn.imgbin.com/10/6/7/imgbin-crayon-shin-chan-himawari-nohara-manga-television-show-action-kamen-manga-SFjwTmYyMc08GjBzZ8sapQATc.jpg'
+        ]
+      },
+      Portrait: {
+        img: [
+          'https://drscdn.500px.org/photo/1000751614/q%3D80_m%3D1000/v2?sig=2144ce736744534f4a2b6cd28c4abd331b7a6619e5bf7349aead19509ab79420',
+          'https://drscdn.500px.org/photo/253613751/q%3D80_m%3D1000/v2?sig=8e96fa6a381017fcb3a9acac856039327d8b1f7534c69e131646c3a87d705ba1',
+          'https://drscdn.500px.org/photo/172108347/q%3D80_m%3D1500_k%3D1/v2?sig=787401dc3c233e6eb863dfbc158a2c7323397ccb4244470eb150c17950bf2184',
+          'https://cdn.imgbin.com/10/6/7/imgbin-crayon-shin-chan-himawari-nohara-manga-television-show-action-kamen-manga-SFjwTmYyMc08GjBzZ8sapQATc.jpg'
+        ]
+      },
+      Landscape: {
+        img: [
+          'https://drscdn.500px.org/photo/311998195/q%3D80_m%3D1000/v2?user_id=26324743&webp=true&sig=4d9165691d89f5817e5303e1a17af5716343996f721c77a3d27d3c508f325de8',
+          'https://cdn.imgbin.com/10/6/7/imgbin-crayon-shin-chan-himawari-nohara-manga-television-show-action-kamen-manga-SFjwTmYyMc08GjBzZ8sapQATc.jpg',
+          'https://drscdn.500px.org/photo/311998195/q%3D80_m%3D1000/v2?user_id=26324743&webp=true&sig=4d9165691d89f5817e5303e1a17af5716343996f721c77a3d27d3c508f325de8',
+          'https://cdn.imgbin.com/10/6/7/imgbin-crayon-shin-chan-himawari-nohara-manga-television-show-action-kamen-manga-SFjwTmYyMc08GjBzZ8sapQATc.jpg'
+        ]
+      },
+      Journalism: {
+        img: [
+          'https://cdn.imgbin.com/10/6/7/imgbin-crayon-shin-chan-himawari-nohara-manga-television-show-action-kamen-manga-SFjwTmYyMc08GjBzZ8sapQATc.jpg',
+          'https://cdn.imgbin.com/10/6/7/imgbin-crayon-shin-chan-himawari-nohara-manga-television-show-action-kamen-manga-SFjwTmYyMc08GjBzZ8sapQATc.jpg',
+          'https://drscdn.500px.org/photo/311998195/q%3D80_m%3D1000/v2?user_id=26324743&webp=true&sig=4d9165691d89f5817e5303e1a17af5716343996f721c77a3d27d3c508f325de8',
+          'https://drscdn.500px.org/photo/311998195/q%3D80_m%3D1000/v2?user_id=26324743&webp=true&sig=4d9165691d89f5817e5303e1a17af5716343996f721c77a3d27d3c508f325de8'
+        ]
+      }
+    };
 
-    }
-
-    
-    $(document).ready(function(){
-      $(document).scroll(function(e) {
-        if (($(this).scrollTop() > 10 ) && !firstScroll) {
+    $(document).ready(function() { $(document).scroll(function(e) {
+        if ($(this).scrollTop() > 10 && !firstScroll) {
           $('html, body').animate(
             {
-              scrollTop: $('#categories-container').offset().top
+              scrollTop: $('#pruebamlo').offset().top - 120 
             },
             2000
           );
-          firstScroll= true;
+          firstScroll = true;
           e.preventDefault();
-         e.stopPropagation();
+          e.stopPropagation();
         }
 
-        if($(this).scrollTop() > Math.max(document.documentElement.clientHeight, window.innerHeight || 0)){
-          $(".navegacion").addClass("nav-bar__fixed bounce");
+        if (
+          $(this).scrollTop() >
+          Math.max(
+            document.documentElement.clientHeight,
+            window.innerHeight || 0
+          )
+        ) {
+          $('.navegacion').addClass('nav-bar__fixed');
         }
       });
       showLetter(0);
     });
 
-    function showLetter(i){
-        let letters =$('#bg-main-title').children(); 
-        if (i <= letters.length) {
-            $(letters[i]).fadeTo(1000,1);
-            setTimeout(() => {
-                showLetter(i + 1);
-            }, 200);
-        }
-        $('#bg-description').fadeTo(4000, 1);
+    function showLetter(i) {
+      let letters = $('#bg-main-title').children();
+      if (i <= letters.length) {
+        $(letters[i]).fadeTo(1000, 1);
+        setTimeout(() => {
+          showLetter(i + 1);
+        }, 200);
+      }
+      $('#bg-description').fadeTo(4000, 1);
     }
-    function changePortafolio(e){
+    function changePortafolio(e) {
       /*$(".categories-container__item").removeClass( "selected" );
       $(e).addClass("selected");
       $(".categories-menu").addClass("hidden-animation");
@@ -179,35 +170,37 @@
 
       }, 1000); */
     }
-    function changeCategory(e){
-      $(".categories-container__item").addClass( "hidden" );
-      $(e).removeClass("hidden");
-
+    function changeCategory(e) {
+      $('.categories-container__item').addClass('hidden');
+      $(e).removeClass('hidden');
     }
 
-    function changeImage(htmlDocument){
-
-      let imgs = imgcontainer[htmlDocument.getAttribute("id")].img; 
+    function changeImage(htmlDocument) {
+      let imgs = imgcontainer[htmlDocument.getAttribute('id')].img;
       console.log(imgs);
-    
-      document.getElementById("img1").setAttribute("src", imgs[0]);
-      document.getElementById("img2").setAttribute("src", imgs[1]);
-      document.getElementById("img3").setAttribute("src", imgs[2]);
-      document.getElementById("img4").setAttribute("src", imgs[3]); 
+
+      document.getElementById('img1').setAttribute('src', imgs[0]);
+      document.getElementById('img2').setAttribute('src', imgs[1]);
+      document.getElementById('img3').setAttribute('src', imgs[2]);
+      document.getElementById('img4').setAttribute('src', imgs[3]);
     }
 
-    function init(){
+    function init() {
       let buttons = document.querySelectorAll('.img-btn');
       for (let i = 0; i < buttons.length; i++) {
-      let self = buttons[i];
+        let self = buttons[i];
 
-        self.addEventListener('click', function (event) {  
-        // prevent browser's default action
-        event.preventDefault();
+        self.addEventListener(
+          'click',
+          function(event) {
+            // prevent browser's default action
+            event.preventDefault();
 
-        // call your awesome function here
-        changeImage(this); // 'this' refers to the current button on for loop
-        }, false);
+            // call your awesome function here
+            changeImage(this); // 'this' refers to the current button on for loop
+          },
+          false
+        );
       }
     }
     init();

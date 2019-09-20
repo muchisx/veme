@@ -1,67 +1,71 @@
+/* navegacion */
 
-*,
-body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
+.navegacion {
+  -webkit-box-shadow: 0px 3px 19px -4px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 3px 19px -4px rgba(0,0,0,0.75);
+  box-shadow: 0px 3px 19px -4px rgba(0,0,0,0.75);
+  background: black;
+  color: white;
+  text-align: center;
+  height: 80px;
+  line-height: 80px;
+
+}
+.miguehp{text-underline-position: under; text-decoration: underline;}
+a{text-decoration: none;}
+
+.nav-bar__fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  height: 60px;
+  line-height: 60px;
 }
 
-.categorias-contenedor{
-    display: flex;
-    height: 98vh;
+.navegacion-text{
+  position: relative;
+  overflow: hidden;
 }
-.categorias-contenedor aside{
-    overflow-y: scroll;
-    width: 500px;
-    margin-right: 20px;
+.navegacion-text a{
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  color: #dcdcdc;
+  right: 20px;
+  transition-duration: 2000ms;
+  font-weight: lighter;
 }
-.categorias-contenedor aside::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  /* Track */
-.categorias-contenedor aside::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-  }
-   
-  /* Handle */
-.categorias-contenedor aside::-webkit-scrollbar-thumb {
-    background: #888; 
-  }
-  
-  /* Handle on hover */
-.categorias-contenedor aside::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+
+.navegacion-text p{
+  position: absolute;
+  top: 60px;
+  color: #dcdcdc;
+  right: 20px;
+ transition-duration: 2000ms;
+ font-weight: lighter;
 }
-.categoria{
-    position: relative;
-    margin-bottom: 10px;
+
+.navegacion-text:hover>a{
+ top: -60px;
+ transition-duration: 2000ms;
 }
-.categoria h1 {
-    position: absolute;
-    width: auto;
-    color: white;
-    top: 3px;
-    left: 3px;
+
+.navegacion-text:hover>p{
+ top: 0px;
+ transition-duration: 2000ms;
 }
-.categoria img {
-    width: 200px;
-    height: auto;
-}
-.categoria-foto {
-    margin-bottom: 40px;
-}
-.categoria-foto img {
-    display: block;
-    margin: 0 auto;
-}
-.categoria-foto p{
-    padding: 0 20px;
-    margin-top: 15px;
+
+footer{
+  height: 60px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: #121212;
+    margin-top: 70px;
+    position: relative;
+    font-size: 0.8rem;
 }
-
-.categoria-foto__contenedor{
-    overflow-y: scroll;
-}
-

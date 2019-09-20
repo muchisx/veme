@@ -7,13 +7,13 @@ body {
 }
 
 body{
-  background-image: url('img/categories.jpg');
+  background-image: url('https://doc-14-64-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/ftht3fvktmhej1uji2es6c4be7fj2lte/1569009600000/17370454622549327326/*/1GqHLB1yeyn5Rz1hNaeXxPD3Te16sFQcY');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
 .background-container {
-  background-image: url('img/background-image.jpg');
+  background-image: url('https://doc-0s-64-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/u7lnh55ihhjvknbl53lbucdg7deiaav9/1569009600000/17370454622549327326/*/1NfiSVAFKxcMdFa2SxsxAvGa8GTpEe16J');
   height: 100vh;
   background-position: center;
   background-attachment: fixed;
@@ -69,7 +69,7 @@ a.button1 {
   border-radius: 0.12em;
   box-sizing: border-box;
   text-decoration: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 300;
   color: #ffffff;
   text-align: center;
@@ -463,12 +463,12 @@ code {
 .hover_content{
   filter: blur(4px);
   -webkit-filter: blur(4px);
-  background: url("https://img.blogs.es/anexom/wp-content/uploads/2018/12/42707058715_61bbdc578f_k.jpg");
+  background: url("https://doc-0s-64-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/rpvqj7mmn9i5as8ksq394eekgu5r019c/1569009600000/17370454622549327326/*/1kxgsTRzehd_HeSGfmdOIQEuBSna_VR0P");
   background-position: center;
-  background-size: 160%;
+  background-size: 100%;
   height: 70vh;
   transform: scale(1.1);
-
+  transition: all 3s ease;
 }
 
 .hover_content img {
@@ -485,25 +485,13 @@ code {
     left: 0;
 }
 .categories_container--btn:hover>.hover_content{
-
-  animation-name: myAnimationBlur;
-  animation-duration: 12000ms;
-  animation-fill-mode: forwards;
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+  transform: scale(1.4);
   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+
 }
 
-@keyframes myAnimationBlur{
-  0%{
-    filter: blur(4px);
-    -webkit-filter: blur(4px);
-    background-size: 160%;
-  }
-  100%{
-    filter: blur(0px);
-    -webkit-filter: blur(0px);
-    background-size: 175%;
-  }
-}
 .categories_container--btn:nth-child(2)>.title{
   background: rgba(0,0,0,0.3)
 }
@@ -513,13 +501,14 @@ code {
   filter: blur(4px);
   -webkit-filter: blur(4px);
   transform: scale(2);
+  transition: all 3s ease;
 
 }
 
 .categories_container--btn:hover>.background_video{
   filter: blur(0px);
   -webkit-filter: blur(0px);
-  transition-duration: 3000ms;
+  transform: scale(2.3);
   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 

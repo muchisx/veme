@@ -7,7 +7,7 @@ body {
 }
 
 body{
-  background-image: url();
+  background-image: url('img/categories.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -57,7 +57,6 @@ h1#bg-main-title {
 #bg-description {
   font-size: 1.5rem;
   color: white;
-  padding-left: 594px;
 }
 
 /* Button */

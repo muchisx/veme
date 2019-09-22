@@ -46,6 +46,7 @@ body{
 .main-title-container {
   display: table-cell;
   vertical-align: middle;
+  box-shadow: 5px 6px 20px 3px black;
 }
 
 h1#bg-main-title {
@@ -302,6 +303,7 @@ a.button1:hover {
     transition-duration: 2000ms;
     font-weight: lighter;
   }
+
 
   .navegacion-text p{
     position: absolute;

@@ -183,7 +183,7 @@ a.button1:hover {
    background: #e8e5e5;
  }
 
- @media only screen and (max-width: 768px) {
+ @media only screen and (max-width: 970px) {
    #categories-container {
       display: grid;
       grid-template-columns: auto;

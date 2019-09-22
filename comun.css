@@ -30,7 +30,7 @@ a{text-decoration: none;}
 }
 .navegacion-text a{
   cursor: pointer;
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   color: #dcdcdc;
   right: 20px;

@@ -49,13 +49,13 @@ body{
 }
 
 h1#bg-main-title {
-  font-size: 9vw;
+  font-size: calc(3vw + 3.2vh);
   color: white;
   font-weight: 400;
 }
 
 #bg-description {
-  font-size: 1.5rem;
+  font-size: calc(0.5vw + 2vh);
   color: white;
 }
 
@@ -183,6 +183,21 @@ a.button1:hover {
    background: #e8e5e5;
  }
 
+ @media only screen and (max-width: 768px) {
+   #categories-container {
+      display: grid;
+      grid-template-columns: auto;
+      grid-gap: 10px;
+      height: 40px;
+      text-align: center;
+      padding: 0 20px;
+      height: 100%;
+      color: #4c4c4c;
+   }
+ }
+
+
+
 .bottom-animated-bar{
   position: relative;
 }
@@ -280,7 +295,7 @@ a.button1:hover {
   }
   .navegacion-text a{
     cursor: pointer;
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     color: #dcdcdc;
     right: 20px;

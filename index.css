@@ -149,11 +149,11 @@ a.button1:hover {
     display: block;
     width: 100px;
     border-top: #8a8a8a 2px solid;
-    top: 0;
+    top: 4px;
     left: 0;
     right: 0;
     margin: 0 auto;
-    position: absolute;
+    position: inherit;
 
 }
 .entoncesqpa p {
@@ -167,7 +167,6 @@ a.button1:hover {
  #categories-container {
     display: grid;
     grid-gap: 10px;
-    height: 40px;
     text-align: center;
     padding: 0 20px;
     height: 100%;
@@ -189,12 +188,24 @@ a.button1:hover {
       display: grid;
       grid-template-columns: auto;
       grid-gap: 10px;
-      height: 40px;
       text-align: center;
-      padding: 0 20px;
+      padding: 0 4vw;
       height: 100%;
       color: #4c4c4c;
    }
+
+   /* #categories_container--btn {
+     cursor: pointer;
+     color: #fff;
+     text-align: center;
+     position: relative;
+     overflow: hidden;
+     -webkit-box-shadow: 3px 4px 18px -1px rgba(0,0,0,0.75);
+     -moz-box-shadow: 3px 4px 18px -1px rgba(0,0,0,0.75);
+     box-shadow: 3px 4px 18px -1px rgba(0,0,0,0.75);
+     border-radius: 5px;
+     height: 91vw;
+   } */
  }
 
 

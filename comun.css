@@ -1,3 +1,6 @@
+.miguehp{text-underline-position: under; text-decoration: underline;}
+a{text-decoration: none;}
+
 /* navegacion */
 
 .navegacion {
@@ -11,15 +14,13 @@
   line-height: 80px;
 
 }
-.miguehp{text-underline-position: under; text-decoration: underline;}
-a{text-decoration: none;}
 
 .nav-bar__fixed{
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 3;
   height: 60px;
   line-height: 60px;
 }
@@ -27,6 +28,8 @@ a{text-decoration: none;}
 .navegacion-text{
   position: relative;
   overflow: hidden;
+  width: 100%;
+  height: 60px;
 }
 .navegacion-text a{
   cursor: pointer;
@@ -37,6 +40,7 @@ a{text-decoration: none;}
   transition-duration: 2000ms;
   font-weight: lighter;
 }
+
 
 .navegacion-text p{
   position: absolute;
@@ -56,6 +60,23 @@ a{text-decoration: none;}
  top: 0px;
  transition-duration: 2000ms;
 }
+
+@media  (max-width: 721px)  {
+  .navegacion-text>h2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition-duration: 2000ms;
+  }
+  .navegacion-text:hover>h2{
+    top: -60px;
+    position: absolute;
+    transition-duration: 2000ms;
+  }
+
+}
+
 
 footer{
   height: 60px;

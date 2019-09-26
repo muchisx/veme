@@ -6,13 +6,6 @@ body {
     padding: 0;
 }
 
-body{
-  background-image: url('https://gdurl.com/ssEM');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
 body:before {
   content: "";
   display: block;

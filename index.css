@@ -296,7 +296,7 @@ a.button1:hover {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 3;
     height: 60px;
     line-height: 60px;
   }
@@ -304,6 +304,8 @@ a.button1:hover {
   .navegacion-text{
     position: relative;
     overflow: hidden;
+    width: 100%;
+    height: 60px;
   }
   .navegacion-text a{
     cursor: pointer;
@@ -334,6 +336,23 @@ a.button1:hover {
    top: 0px;
    transition-duration: 2000ms;
   }
+
+  @media  (max-width: 721px)  {
+    .navegacion-text>h2{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      transition-duration: 2000ms;
+    }
+    .navegacion-text:hover>h2{
+      top: -60px;
+      position: absolute;
+      transition-duration: 2000ms;
+    }
+    
+  }
+
 
   footer{
     height: 60px;

@@ -147,7 +147,7 @@
     $(document).ready(function() { 
       $('.ytp-large-play-button.ytp-button').trigger('click');
       $(document).scroll(function(e) {
-        if ($(this).scrollTop() > 10 && !firstScroll) {
+/*         if ($(this).scrollTop() > 10 && !firstScroll) {
           $('html, body').animate(
             {
               scrollTop: $('#pruebamlo').offset().top - 120
@@ -157,7 +157,7 @@
           firstScroll = true;
           e.preventDefault();
           e.stopPropagation();
-        }
+        } */
 
         if (
           $(this).scrollTop() >
@@ -169,19 +169,8 @@
           $('.navegacion').addClass('nav-bar__fixed');
         }
       });
-      showLetter(0);
     });
 
-    function showLetter(i) {
-      let letters = $('#bg-main-title').children();
-      if (i <= letters.length) {
-        $(letters[i]).fadeTo(1000, 1);
-        setTimeout(() => {
-          showLetter(i + 1);
-        }, 200);
-      }
-      $('#bg-description').fadeTo(4000, 1);
-    }
     function changePortafolio(e) {
       /*$(".categories-container__item").removeClass( "selected" );
       $(e).addClass("selected");
@@ -197,10 +186,7 @@
 
       }, 1000); */
     }
-    function changeCategory(e) {
-      $('.categories-container__item').addClass('hidden');
-      $(e).removeClass('hidden');
-    }
+
 
     function changeImage(htmlDocument) {
       let imgs = imgcontainer[htmlDocument.getAttribute('id')].img;
@@ -231,5 +217,6 @@
       }
     }
     init();
+    console.log("v2.1");
   </script>
 </html>

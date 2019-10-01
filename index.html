@@ -100,7 +100,7 @@
           VIDEO
         </h1>
         <div class="background_video">
-          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/PX9-us-1t4I?autoplay=1&amp;controls=0&amp;disablekb=1&amp;fs=0&amp;loop=1&amp;mute=1&amp;playlist=PX9-us-1t4I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div id="player"></div>
         </div>
       </div>
       </a>
@@ -108,15 +108,42 @@
     <footer id="contact">
       Copyright 2019 © Miguel Ángel
     </footer>
-
-    <script type="text/javascript" src="skrollr.min.js"></script>
-  	<script type="text/javascript">
-  	var s = skrollr.init();
-  	</script>
   </body>
 
   <script>
     let firstScroll = false;
+    
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '100%',
+          width: '100%',
+          playerVars: { 'autoplay': 1, 'controls': 0, 'loop':1, 'playlist': 'PX9-us-1t4I', 'mute':1 ,'autohide':1, 'fs':1,'disablekb':1 },
+          videoId: 'PX9-us-1t4I',
+          events: {
+            'onReady': onPlayerReady,
+          }
+        });
+      }
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          setTimeout(stopVideo, 6000);
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+        player.playVideo();
+      }
     $(document).ready(function() { $(document).scroll(function(e) {
         if ($(this).scrollTop() > 10 && !firstScroll) {
           $('html, body').animate(

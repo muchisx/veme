@@ -574,3 +574,16 @@ code {
   background: rgba(0,0,0,0);
   transition-duration: 3000ms;
 }
+
+
+
+@media screen and (max-width: 559px){
+
+  .background-container{
+      -moz-background-size: auto;
+      -webkit-background-size: auto;
+      background-attachment: scroll;
+      background-position: top;
+      background-size: auto;
+     }
+  }

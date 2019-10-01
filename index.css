@@ -582,7 +582,7 @@ code {
   .background-container{
       -moz-background-size: auto;
       -webkit-background-size: auto;
-      background-attachment: scroll;
+      background-attachment: initial;
       background-position: top;
       background-size: auto;
      }

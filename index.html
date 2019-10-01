@@ -144,7 +144,9 @@
         player.stopVideo();
         player.playVideo();
       }
-    $(document).ready(function() { $(document).scroll(function(e) {
+    $(document).ready(function() { 
+      $('.ytp-large-play-button.ytp-button').trigger('click');
+      $(document).scroll(function(e) {
         if ($(this).scrollTop() > 10 && !firstScroll) {
           $('html, body').animate(
             {

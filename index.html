@@ -114,8 +114,51 @@
 
   <script>
     let firstScroll = false;
-    $(document).ready(function() { $(document).scroll(function(e) {
-        if ($(this).scrollTop() > 10 && !firstScroll) {
+    $(document).ready(function() {
+          
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '100%',
+          width: '100%',
+          playerVars: { 'autoplay': 1, 'controls': 0, 'loop':1, 'playlist': 'PX9-us-1t4I', 'mute':1 ,'autohide':1, 'fs':1,'disablekb':1 },
+          videoId: 'PX9-us-1t4I',
+          events: {
+            'onReady': onPlayerReady,
+          }
+        });
+      }
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          setTimeout(stopVideo, 6000);
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+        player.playVideo();
+      }
+
+      $('.ytp-large-play-button.ytp-button').trigger('click');
+
+      $(function() {
+            var video = $("#someVideo").get(0);
+
+            fakeClick(function() {
+              player.playVideo();
+            });
+        });
+      $(document).scroll(function(e) {
+/*         if ($(this).scrollTop() > 10 && !firstScroll) {
           $('html, body').animate(
             {
               scrollTop: $('#pruebamlo').offset().top - 120
@@ -125,7 +168,7 @@
           firstScroll = true;
           e.preventDefault();
           e.stopPropagation();
-        }
+        } */
 
         if (
           $(this).scrollTop() >
@@ -137,19 +180,8 @@
           $('.navegacion').addClass('nav-bar__fixed');
         }
       });
-      showLetter(0);
     });
 
-    function showLetter(i) {
-      let letters = $('#bg-main-title').children();
-      if (i <= letters.length) {
-        $(letters[i]).fadeTo(1000, 1);
-        setTimeout(() => {
-          showLetter(i + 1);
-        }, 200);
-      }
-      $('#bg-description').fadeTo(4000, 1);
-    }
     function changePortafolio(e) {
       /*$(".categories-container__item").removeClass( "selected" );
       $(e).addClass("selected");
@@ -165,10 +197,7 @@
 
       }, 1000); */
     }
-    function changeCategory(e) {
-      $('.categories-container__item').addClass('hidden');
-      $(e).removeClass('hidden');
-    }
+
 
     function changeImage(htmlDocument) {
       let imgs = imgcontainer[htmlDocument.getAttribute('id')].img;
@@ -199,5 +228,30 @@
       }
     }
     init();
+    console.log("v2.2");
+
+    function fakeClick(fn) {
+            var $a = $('<a href="#" id="fakeClick"></a>');
+                $a.bind("click", function(e) {
+                    e.preventDefault();
+                    fn();
+                });
+
+            $("body").append($a);
+
+            var evt, 
+                el = $("#fakeClick").get(0);
+
+            if (document.createEvent) {
+                evt = document.createEvent("MouseEvents");
+                if (evt.initMouseEvent) {
+                    evt.initMouseEvent("click", true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+                    el.dispatchEvent(evt);
+                }
+            }
+
+            $(el).remove();
+        }
+
   </script>
 </html>

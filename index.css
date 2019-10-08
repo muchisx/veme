@@ -30,18 +30,18 @@ body:before {
   background-attachment: fixed;
   background-size: cover;
 
-  display: grid;
-  grid-gap: 10px;
+  display: relative;
+  width: 100%;
   color: #444;
 /*   justify-items: center;*/
   justify-content: stretch;
 }
 
 .text-container {
-  grid-column: 1 / span 2;
   display: table;
   height: 100%;
   position: relative;
+  width: 100%;
   text-align: center;
   background: #00000038;
 }

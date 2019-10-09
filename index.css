@@ -132,8 +132,9 @@ a.button1:hover {
 
  .entoncesqpa{
      height: 70px;
-     margin: 50px;
      text-align: center;
+     margin-top: 45px;
+     margin-bottom: 45px;
  }
  .entoncesqpa p::after{
     content: '';

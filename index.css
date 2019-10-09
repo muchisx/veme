@@ -559,11 +559,4 @@ code {
 
 @media screen and (max-width: 559px){
 
-  .background-container{
-      -moz-background-size: auto;
-      -webkit-background-size: auto;
-      background-attachment: initial;
-      background-position: top;
-      background-size: auto;
-     }
   }

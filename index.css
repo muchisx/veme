@@ -9,17 +9,12 @@ body {
 
 
 .background-container {
-  background-image: url('https://gdurl.com/3TXA');
   height: 100vh;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
 
   display: relative;
   width: 100%;
   color: #444;
 /*   justify-items: center;*/
-  justify-content: stretch;
 }
 
 .text-container {
@@ -42,7 +37,7 @@ body {
 .main-title-container {
   display: table-cell;
   vertical-align: middle;
-  box-shadow: 5px 6px 20px 3px black;
+  box-shadow: 5px 0px 7px 3px black;
 }
 
 h1#bg-main-title {
@@ -564,11 +559,11 @@ code {
 
 @media screen and (max-width: 559px){
 
-  /*.background-container{
+  .background-container{
       -moz-background-size: auto;
       -webkit-background-size: auto;
       background-attachment: initial;
       background-position: top;
       background-size: auto;
-     }*/
+     }
   }

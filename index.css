@@ -561,3 +561,8 @@ code {
 @media screen and (max-width: 559px){
 
   }
+  .thumbnail {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+  }

@@ -17,7 +17,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="shortcut icon" type="image/png" href="./img/favicon.png"/>
-    <script src="parallax.min.js" ></script>
+    <script src="simpleParallax.js"></script>
   </head>
   <body>
 
@@ -58,6 +58,7 @@
             <a href="something" class="button1">Another button</a>
         </div> -->
     </div>
+    <img class="thumbnail" src="https://gdurl.com/ssEM" alt="image">
     <div class="parallax-window" data-parallax="scroll" data-image-src="https://gdurl.com/ssEM" data-bleed="1">
 
     <div class="navegacion">
@@ -118,6 +119,10 @@
   </body>
 
   <script>
+    var image = document.getElementsByClassName('thumbnail');
+new simpleParallax(image, {	
+  scale: 1.5,
+	transition: 'cubic-bezier(0,0,0,1)'});
     let firstScroll = false;
     $(document).ready(function() {
       $(document).scroll(function(e) {

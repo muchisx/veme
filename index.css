@@ -522,7 +522,7 @@ code {
 .categories_container--btn:hover>.hover_content{
   filter: blur(0px);
   -webkit-filter: blur(0px);
-  transform: scale(1.4);
+  transform: scale(1.15);
   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 
 }

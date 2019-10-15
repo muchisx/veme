@@ -17,12 +17,12 @@
       crossorigin="anonymous"
     ></script>
     <link rel="shortcut icon" type="image/png" href="./img/favicon.png"/>
-    <script src="simpleParallax.js"></script>
-  </head>
+    <link rel="stylesheet" href="universal-parallax.min.css">
+    <script src="universal-parallax.min.js"></script>  </head>
   <body>
 
     <div class="background-container parallax-window" >
-      <img class="thumbnail" src="https://gdurl.com/3TXA" alt="image">
+      <div class="parallax" data-parallax-image="https://gdurl.com/3TXA"></div>
       <div class="text-container">
         <div class="main-title-container">
           <h1 id="bg-main-title" style="
@@ -74,8 +74,8 @@
         </div>
       </div>
     <div class="parallax-main-containt" >
-      <img class="thumbnail" src="https://gdurl.com/ssEM" alt="image">
 
+      <div class="parallax" data-parallax-image="https://gdurl.com/ssEM"></div>
 
     <section id="pruebamlo" class="entoncesqpa " >
       <p style="font-size: calc(0.5vw + 1.2vh)">
@@ -121,10 +121,9 @@
   </body>
 
   <script>
-    var image = document.getElementsByClassName('thumbnail');
-new simpleParallax(image, {	
-  scale: 1.5,
-	transition: 'cubic-bezier(0,0,0,1)'});
+    new universalParallax().init({
+    speed: 8.0
+});
     let firstScroll = false;
     $(document).ready(function() {
       $(document).scroll(function(e) {

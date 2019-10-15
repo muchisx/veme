@@ -133,7 +133,7 @@ a.button1:hover {
  .entoncesqpa{
      height: 70px;
      text-align: center;
-     margin-top: 45px;
+     padding-top: 45px;
      margin-bottom: 45px;
  }
  .entoncesqpa p::after{
@@ -354,7 +354,6 @@ a.button1:hover {
       align-items: center;
       color: white;
       background: #121212;
-      margin-top: 70px;
       position: relative;
       font-size: 0.8rem;
   }
@@ -561,3 +560,23 @@ code {
 @media screen and (max-width: 559px){
 
   }
+  .thumbnail {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+  }
+
+.simpleParallax{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top:0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  right: 0;
+}
+.parallax-main-containt{
+  position: relative;
+  padding-bottom: 80px;
+}

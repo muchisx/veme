@@ -131,10 +131,8 @@ a.button1:hover {
  /* category separate */
 
  .entoncesqpa{
-     height: 70px;
      text-align: center;
-     padding-top: 45px;
-     margin-bottom: 45px;
+     padding: 45px;
  }
  .entoncesqpa p::after{
     content: '';
@@ -503,9 +501,8 @@ code {
   -webkit-filter: blur(4px);
   background: url("https://gdurl.com/nnQY");
   background-position: center;
-  background-size: 100%;
+  background-size: cover;
   height: 70vh;
-  transform: scale(1.1);
   transition: all 3s ease;
 }
 

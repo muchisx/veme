@@ -595,6 +595,9 @@ code {
   z-index: 1;
   font-weight: bolder;
   position: relative;
+  font-style: italic;
+  text-shadow: 6px 6px #171717;
+                  
 }
 
 .animate-txt > .oh {
@@ -607,6 +610,9 @@ code {
   font-weight: 100;
   z-index: -1;
   display: inline-block;
+  font-weight: bolder;
+  font-style: italic;
+  text-shadow: 6px 6px #171717;
 }
 
 @keyframes fadeIn {
@@ -639,12 +645,15 @@ code {
 @keyframes secondSpan {
   0% {
     transform: translateX(-100%);
+    font-size: 2rem;
   }
   60% {
     transform: translateX(-100%);
   }
   100% {
     transform: translateX(-0%);
+    font-size: 3rem;
+
   }
 }
 

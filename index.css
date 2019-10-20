@@ -597,7 +597,7 @@ code {
   position: relative;
   font-style: italic;
   text-shadow: 6px 6px #171717;
-                  
+
 }
 
 .animate-txt > .oh {
@@ -619,8 +619,8 @@ code {
   0% {
     opacity: 0;
     transform: scale(1);
-  } 
-  50% {
+  }
+  40% {
     opacity: 1;
     transform: scale(1.1);
   }
@@ -634,7 +634,7 @@ code {
   0% {
     transform: translateX(50%);
   }
-  60% {
+  10  % {
     transform: translateX(50%);
   }
   100% {
@@ -644,20 +644,20 @@ code {
 
 @keyframes secondSpan {
   0% {
-    transform: translateX(-100%);
-    font-size: 2rem;
+    transform: translateX(-110%);
+    font-size: calc(1vw + 2vh);
   }
-  60% {
+  70% {
     transform: translateX(-100%);
   }
   100% {
-    transform: translateX(-0%);
-    font-size: 3rem;
+    transform: translateX(0%);
+    font-size: calc(3vw + 3.2vh);
 
   }
 }
 
-/* SVG */ 
+/* SVG */
 .loader-container{
   position: fixed;
   width: 100%;

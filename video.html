@@ -41,6 +41,23 @@
     id="collection-5d79efd6270f043a4b971549"
   >
 
+  <div class="loader-container" id="loader-anm">
+    <svg>
+      <g>
+        <path d="M 50,100 A 1,1 0 0 1 50,0"/>
+      </g>
+      <g>
+        <path d="M 50,75 A 1,1 0 0 0 50,-25"/>
+      </g>
+      <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style="stop-color:#fff;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:##171717;stop-opacity:1" />
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
     <div class="navegacion nav-bar__fixed">
       <div class="navegacion-text">
         <h2>
@@ -280,6 +297,14 @@
           );
         })
         }
+
+        function loaded(){
+
+          window.scrollTo(0, 0);
+          document.getElementById("loader-anm").remove();
+          document.getElementById("main-text").classList.add("animate-txt");
+        }
+        window.onload = loaded;
     </script>
   </body>
 </html>

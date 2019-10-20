@@ -20,6 +20,7 @@
     <meta name="description" content="" />
     <link href="gallery.css" rel="stylesheet" />
     <link href="comun.css" rel="stylesheet" />
+
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:200,200i,400,400i,700,700i&display=swap"
       rel="stylesheet"
@@ -41,6 +42,24 @@
     class="blog-sidebar-display-auto index-thumb-title-position-below index-item-layout-auto thumbnail-layout-basic-grid thumbnails-on-open-page-show-all   layout-style-left page-borders-none underline-body-links gallery-page-controls-tiny-thumbnails  social-icon-style-normal   show-category-navigation   event-show-past-events event-thumbnails event-thumbnail-size-32-standard event-date-label  event-list-show-cats event-list-date event-list-time event-list-address   event-icalgcal-links  event-excerpts  event-item-back-link    product-list-titles-under product-list-alignment-center product-item-size-11-square product-image-auto-crop product-gallery-size-11-square  show-product-price show-product-item-nav product-social-sharing tweak-v1-related-products-image-aspect-ratio-11-square tweak-v1-related-products-details-alignment-center newsletter-style-dark hide-opentable-icons opentable-style-dark small-button-style-solid small-button-shape-square medium-button-style-solid medium-button-shape-square large-button-style-solid large-button-shape-square image-block-poster-text-alignment-center image-block-card-dynamic-font-sizing image-block-card-content-position-center image-block-card-text-alignment-center image-block-overlap-dynamic-font-sizing image-block-overlap-content-position-center image-block-overlap-text-alignment-left image-block-collage-dynamic-font-sizing image-block-collage-content-position-top image-block-collage-text-alignment-left image-block-stack-dynamic-font-sizing image-block-stack-text-alignment-left button-style-solid button-corner-style-square tweak-product-quick-view-button-style-floating tweak-product-quick-view-button-position-bottom tweak-product-quick-view-lightbox-excerpt-display-truncate tweak-product-quick-view-lightbox-show-arrows tweak-product-quick-view-lightbox-show-close-button tweak-product-quick-view-lightbox-controls-weight-light native-currency-code-usd collection-5d79efd6270f043a4b971549 collection-type-index collection-layout-default homepage view-list mobile-style-available site-title has-primary-nav index-page-open"
     id="collection-5d79efd6270f043a4b971549"
   >
+
+  <div class="loader-container" id="loader-anm">
+    <svg>
+      <g>
+        <path d="M 50,100 A 1,1 0 0 1 50,0"/>
+      </g>
+      <g>
+        <path d="M 50,75 A 1,1 0 0 0 50,-25"/>
+      </g>
+      <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style="stop-color:#fff;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:##171717;stop-opacity:1" />
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
     <div class="navegacion nav-bar__fixed">
       <div class="navegacion-text">
         <h2>
@@ -426,6 +445,13 @@
           copyText.setSelectionRange(0, 99999);
           document.execCommand("copy");
         }
+        function loaded(){
+
+          window.scrollTo(0, 0);
+          document.getElementById("loader-anm").remove();
+          document.getElementById("main-text").classList.add("animate-txt");
+        }
+        window.onload = loaded;
     </script>
   </body>
 </html>

@@ -41,6 +41,7 @@ h1#bg-main-title {
   font-size: calc(3vw + 3.2vh);
   color: white;
   font-weight: 400;
+  letter-spacing: 1px
 }
 
 #bg-description {
@@ -581,18 +582,36 @@ code {
   padding-bottom: 80px;
 }
 
+.opabody {
+  background: black;
+  animation: 0.7s Fadebody forwards;
+  transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+@keyframes Fadebody {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 
 .animate-txt{
   display: inline-block;
-  animation: fadeIn 1.5s forwards;
+  animation: fadeIn 2.2s forwards;
   opacity: 0;
   transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
 .animate-txt > .first {
   display: inline-block;
-  animation: firstSpan 1.5s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  z-index: 1;
+  animation: firstSpan 2.2s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  z-index: -1;
   font-weight: bolder;
   position: relative;
   font-style: italic;
@@ -603,20 +622,32 @@ code {
 .animate-txt > .oh {
   display: inline-flex;
   overflow: hidden;
+  padding-right: 4px;
+  padding-left: 4px;
 }
 
 .animate-txt .second {
-  animation: secondSpan 1.5s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  animation: secondSpan 3.7s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
   font-weight: 100;
-  z-index: -1;
+  z-index: -2;
   display: inline-block;
   font-weight: bolder;
   font-style: italic;
   text-shadow: 6px 6px #171717;
 }
 
+.animate-txt .third {
+  animation: thirdSpan 3.2s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  z-index: -2;
+  display: inline-block;
+}
+
 @keyframes fadeIn {
   0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  25% {
     opacity: 0;
     transform: scale(1);
   }
@@ -634,7 +665,10 @@ code {
   0% {
     transform: translateX(50%);
   }
-  10  % {
+  31% {
+    transform: translateX(50%);
+  }
+  41  % {
     transform: translateX(50%);
   }
   100% {
@@ -644,16 +678,37 @@ code {
 
 @keyframes secondSpan {
   0% {
-    transform: translateX(-110%);
-    font-size: calc(1vw + 2vh);
-  }
-  70% {
     transform: translateX(-100%);
+    font-size: calc(2vw + 2vh);
   }
-  100% {
+  33% {
+    transform: translateX(-100%);
+    font-size: calc(2vw + 2vh);
+  }
+  44% {
+    transform: translateX(0%);
+}
+  47% {
+    font-size: calc(2vw + 2vh);
+  }
+  74% {
     transform: translateX(0%);
     font-size: calc(3vw + 3.2vh);
+  }
+}
 
+@keyframes thirdSpan {
+  0% {
+    transform: translateY(-110%);
+  }
+  22% {
+    transform: translateY(-110%);
+  }
+  98  % {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0%);
   }
 }
 
@@ -720,3 +775,5 @@ svg path {
 }
 
 /* SVG end
+
+/* Opacity body */

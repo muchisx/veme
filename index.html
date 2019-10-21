@@ -54,10 +54,17 @@
             </span>
           </div>
         </h1>
+
+
         <h3 id="bg-description" style="
                   text-shadow: 4px 4px #171717">
-          Visual Artist
+                    <div  id="main-text2">
+          <span class="oh">
+          <span class="third"> Visual Artist </span>
+          </span>
+          </div>
         </h3>
+
 
       </div>
     </div>
@@ -215,7 +222,9 @@
 
     window.scrollTo(0, 0);
     document.getElementById("loader-anm").remove();
+    document.body.classList.add("opabody");
     document.getElementById("main-text").classList.add("animate-txt");
+    document.getElementById("main-text2").classList.add("animate-txt");
   }
   window.onload = loaded;
 </script>

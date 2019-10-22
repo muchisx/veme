@@ -153,4 +153,25 @@ svg path {
   }
 }
 
-/* SVG end
+/* SVG end */
+
+.opabody {
+  background: black;
+  animation: 0.7s Fadebody forwards;
+  transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+@keyframes Fadebody {
+  0% {
+    opacity: 0;
+    background-color: black
+  }
+  50% {
+    opacity: 0;
+    background-color: black
+  }
+  100% {
+    opacity: 1;
+    background-color: white
+  }
+}

@@ -655,10 +655,6 @@ code {
     opacity: 1;
     transform: scale(1.1);
   }
-  70% {
-    opacity: 1;
-    transform: scale(1);
-  }
   100% {
     transform: scale(1);
     opacity: 1;
@@ -675,23 +671,29 @@ code {
   41  % {
     transform: translateX(50%);
   }
-  70% {
+  100% {
     transform: translateX(0%);
   }
 }
 
 @keyframes secondSpan {
   0% {
-    transform: translateX(-140%);
+    transform: translateX(-100%);
+    font-size: calc(2vw + 2vh);
   }
   33% {
     transform: translateX(-100%);
+    font-size: calc(2vw + 2vh);
   }
-  37% {
+  44% {
     transform: translateX(0%);
+}
+  47% {
+    font-size: calc(2vw + 2vh);
   }
-  60% {
+  74% {
     transform: translateX(0%);
+    font-size: calc(3vw + 3.2vh);
   }
 }
 
@@ -702,10 +704,10 @@ code {
   22% {
     transform: translateY(-110%);
   }
-  65  % {
+  98  % {
     transform: translateY(-10%);
   }
-  85% {
+  100% {
     transform: translateY(0%);
   }
 }

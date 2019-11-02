@@ -295,7 +295,7 @@ a.button1:hover {
     width: 100%;
     height: 60px;
   }
-  .navegacion-text a{
+  .navegacion-text .contacto{
     cursor: pointer;
     /* position: absolute; */
     top: 0;
@@ -315,7 +315,7 @@ a.button1:hover {
    font-weight: lighter;
   }
 
-  .navegacion-text:hover>a{
+  .navegacion-text:hover>.contacto{
    top: -60px;
    transition-duration: 2000ms;
   }

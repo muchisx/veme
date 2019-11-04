@@ -84,13 +84,14 @@
         <h2>
           <a class="contacto" href="./index.html" style="text-decoration: none;font-weight: 400;position:relative;left:-1.75%">Miguel Ángel </a>
         </h2>
-        <a class="contacto" style="
+        <a class="contacto copyclick" style="
             text-underline-position: under;
             position: absolute;
             text-decoration: underline;
+            pointer-events: none;
             ">Contact
         </a>
-        <p> miguel.angel.creator@gmail.com </p>
+        <p id="email" class"copyclick" style="user-select: all"> miguel.angel.creator@gmail.com </p>
       </div>
     </div>
     <div class="parallax-main-containt">
@@ -238,5 +239,17 @@
   }
   window.onload = loaded;
 </script>
+
+<script type="text/javascript">
+    const email = document.getElementById("email");
+    const copyclick = document.getElementsByClassName("copyclick");
+
+    copyclick.onclick = function () {
+        document.execCommand("Copy")
+
+    };
+
+</script>
+
 
 </html>

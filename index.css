@@ -504,7 +504,7 @@ code {
 .hover_content{
   filter: blur(4px);
   -webkit-filter: blur(4px);
-  background: url("https://gdurl.com/nnQY");
+  background: url("./img/photography.jpg");
   background-position: center;
   background-size: cover;
   height: 70vh;

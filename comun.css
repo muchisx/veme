@@ -184,3 +184,7 @@ svg path {
     background-color: white
   }
 }
+
+.pointer { 
+  cursor: pointer;
+}

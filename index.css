@@ -615,11 +615,15 @@ code {
   transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
+.rotate {
+  transform: rotate(-10deg);
+}
+
 .animate-txt > .first {
   display: inline-block;
   animation: firstSpan 2.2s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
   z-index: -1;
-  font-weight: bolder;
+  font-weight: 900;
   position: relative;
   font-style: italic;
   text-shadow: 6px 6px #171717;
@@ -638,15 +642,16 @@ code {
   font-weight: 100;
   z-index: -2;
   display: inline-block;
-  font-weight: bolder;
+  font-weight: 900;
   font-style: italic;
   text-shadow: 6px 6px #171717;
 }
 
 .animate-txt .third {
-  animation: thirdSpan 3.2s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  animation: thirdSpan 2.8s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
   z-index: -2;
   display: inline-block;
+  font-weight: lighter;
 }
 
 @keyframes fadeIn {
@@ -782,3 +787,9 @@ svg path {
 /* SVG end
 
 /* Opacity body */
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

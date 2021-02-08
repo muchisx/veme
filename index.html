@@ -73,7 +73,7 @@
                     <div  id="main-text2">
           <span class="oh">
             <div class="third unselectable" .quotes </div>
-          <span class="third unselectable"> Ideas made Visual Art </span>
+          <span class="third unselectable" id="randomQuote"></span>
           </span>
           </div>
         </h3>
@@ -273,7 +273,18 @@
 
     $(el).remove();
   }
+
+  var quotesList = [
+    "Ideas made Visual Art",
+    "Ideas hechas Arte Visual",
+    "You dream it, we produce it"
+  ]
+
   function loaded(){
+
+    var FinalText = quotesList[Math.floor(Math.random()*quotesList.length)]
+    var randomQuote = $("#randomQuote").text(FinalText);
+
 
     window.scrollTo(0, 0);
     document.getElementById("loader-anm").remove();

@@ -4,7 +4,70 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+     /*  [Gómez] Scroll down header */
+:root{
+    --color_bg:#a9a9a97a;
+}
+.div-img {
+    width: 50px;
+    height: 50px;
+    background-color: var(--color_bg);
+    -webkit-mask-box-image: url(./img/elements/down.svg);
+}
+
+.swipe-up {
+  position: absolute;
+    bottom: 10px;
+    width: 100%;
+  overflow: hidden;
+  transform: translateY(-15%);
+  -webkit-transform: translateY(-15%);
+  animation: slide-in 4s infinite;
+}
+
+.swipe-up .icono {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+
+
+}
+
+@-webkit-keyframes slide-in {
+
+    50% {
+        transform: translateY(15%);
+        -webkit-transform: translateY(15%);
+    }
+
+    100% {
+        transform: translateY(-15%);
+        -webkit-transform: translateY(-15%);
+    }
+}
+
+@keyframes slide {
+    100% {
+        left: 0;
+    }
+}
+
+            /*  [Gómez] Scroll down header */
 
 .unselectable {
     -webkit-touch-callout: none;
@@ -13,6 +76,7 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    overflow: hidden;
 }
 
 .background-container {
@@ -617,6 +681,11 @@ code {
 
 .rotate {
   transform: rotate(-10deg);
+  overflow: hidden;
+}
+
+#bg-main-title {
+  overflow: hidden;
 }
 
 .animate-txt > .first {
@@ -627,6 +696,7 @@ code {
   position: relative;
   font-style: italic;
   text-shadow: 6px 6px #171717;
+  overflow: hidden;
 
 }
 
@@ -792,4 +862,5 @@ svg path {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden
 }

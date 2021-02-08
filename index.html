@@ -79,7 +79,7 @@
         </h3>
 
         <div class="swipe-up">
-        
+
               <div class="icono ">
                   <div class="div-img">
 
@@ -183,6 +183,26 @@
                 e.preventDefault();
                 e.stopPropagation();
               } */
+
+              var scrollTop = $(this).scrollTop();
+              var inMobile = $(this).width() <=760;
+
+              $('.icono').css({
+      opacity: function() {
+        var elementHeight = $(this).height();
+
+        if (inMobile) {
+          opacity = ((1 + (elementHeight/0.2 - scrollTop) / elementHeight));
+        }
+
+        else {
+          opacity = ((1 + (elementHeight/0.1 - scrollTop) / elementHeight));
+        }
+
+
+        return opacity;
+      }
+    });
 
       if (
         $(this).scrollTop() >

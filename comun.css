@@ -1,31 +1,16 @@
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 .miguehp{text-underline-position: under; text-decoration: underline;}
 a{text-decoration: none;}
-
-.whitelink {
-  a:link {
-  color: green;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:visited {
-  color: pink;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:hover {
-  color: red;
-  background-color: transparent;
-  text-decoration: underline;
-}
-
-a:active {
-  color: yellow;
-  background-color: transparent;
-  text-decoration: underline;
-}
-}
 
 .unselectable {
     -webkit-touch-callout: none;
@@ -45,9 +30,19 @@ a:active {
   background: black;
   color: white;
   text-align: center;
-  height: 80px;
-  line-height: 80px;
+  height: 60px;
+  line-height: 60px;
 
+}
+
+.navegacion-text .contacto{
+  cursor: pointer;
+  /* position: absolute; */
+  top: 0;
+  color: #dcdcdc;
+  right: 20px;
+  transition-duration: 2000ms;
+  font-weight: lighter;
 }
 
 .nav-bar__fixed{
